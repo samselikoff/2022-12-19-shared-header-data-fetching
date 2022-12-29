@@ -11,9 +11,11 @@ export default function Header() {
           ▲
         </Link>
         <Link
-          className={`text-gray-400 ${
-            pathname === "/about" ? "text-white" : "hover:text-white"
-          }`}
+          className={
+            pathname === "/about"
+              ? "text-white"
+              : "hover:text-white text-gray-400"
+          }
           href="/about"
         >
           About

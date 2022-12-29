@@ -1,4 +1,4 @@
-export default function Home() {
+export default function About() {
   return (
     <div>
       <p className="text-3xl">About</p>
