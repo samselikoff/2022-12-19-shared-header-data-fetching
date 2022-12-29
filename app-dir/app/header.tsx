@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { getUser } from "../lib/get-user";
 import NavLink from "./nav-link";
 
 export default async function Header() {
@@ -19,13 +20,7 @@ export default async function Header() {
           About
         </NavLink>
       </div>
-      {/* <span className="text-gray-400">Welcome, {name}!</span> */}
+      <span className="text-gray-400">Welcome, {user.name}!</span>
     </header>
   );
-}
-
-async function getUser() {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
-
-  return { name: "Sam" };
 }

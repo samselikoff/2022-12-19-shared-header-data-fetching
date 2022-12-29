@@ -1,5 +1,9 @@
 # Script
 
+# Todo
+
+- turn into syn
+
 ## Next 12
 
 Want to add dynamic data to our header
@@ -36,3 +40,4 @@ So the downside to adding data requirements to our shared Header component is th
 Now let's see how Server Components solve this in Next 13.
 
 ## Next 13
+

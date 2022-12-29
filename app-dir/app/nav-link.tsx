@@ -17,7 +17,6 @@ export default function NavLink({
     pathname === href
       ? `${className} ${activeClassName}`
       : `${className} ${inactiveClassName}`;
-  console.log({ classes });
 
   return (
     <Link href={href} className={classes} {...rest}>
