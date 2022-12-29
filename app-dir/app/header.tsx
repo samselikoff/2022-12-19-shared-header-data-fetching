@@ -1,25 +1,25 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import NavLink from "./nav-link";
 
 export default async function Header() {
   let user = await getUser();
 
   return (
-    <header className="p-2 bg-gray-100 shadow-md flex justify-between items-center text-sm">
-      <div className="space-x-4">
-        <Link
-          className="text-gray-500 font-medium hover:text-gray-900"
-          href="/"
-        >
-          Home
+    <header className="p-4 border-b border-gray-800 flex justify-between items-center text-sm font-semibold">
+      <div className="space-x-6 flex items-center">
+        <Link className="text-lg leading-none" href="/">
+          ▲
         </Link>
-        <Link
-          className="text-gray-500 font-medium hover:text-gray-900"
+        <NavLink
+          activeClassName="text-white"
+          inactiveClassName="text-gray-400 hover:text-white"
           href="/about"
         >
           About
-        </Link>
+        </NavLink>
       </div>
-      <span className="text-gray-500">Welcome, {user.name}!</span>
+      {/* <span className="text-gray-400">Welcome, {name}!</span> */}
     </header>
   );
 }

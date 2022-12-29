@@ -1,10 +1,9 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export default function Header({ user }: { user: { name: string } }) {
+export default function Header({ name }: { name: string }) {
+  // export default function Header() {
   let { pathname } = useRouter();
-
-  console.log({ pathname });
 
   return (
     <header className="p-4 border-b border-gray-800 flex justify-between items-center text-sm font-semibold">
@@ -21,7 +20,7 @@ export default function Header({ user }: { user: { name: string } }) {
           About
         </Link>
       </div>
-      <span className="text-gray-400">Welcome, {user.name}!</span>
+      <span className="text-gray-400">Welcome, {name}!</span>
     </header>
   );
 }

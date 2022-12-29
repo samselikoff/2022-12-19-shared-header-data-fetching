@@ -3,11 +3,10 @@ import type { AppProps } from "next/app";
 import Header from "../components/header";
 
 export default function App({ Component, pageProps }: AppProps) {
-  console.log(pageProps);
-
   return (
     <>
-      <Header user={pageProps.user} />
+      <Header name={pageProps.user.name} />
+      {/* <Header /> */}
 
       <main className="px-4 py-6">
         <Component {...pageProps} />
