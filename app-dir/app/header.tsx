@@ -1,7 +1,10 @@
 import Link from "next/link";
+import { getUser } from "../lib/get-user";
 import NavLink from "./nav-link";
 
-export default function Header() {
+export default async function Header() {
+  const { name } = await getUser();
+
   return (
     <header className="p-4 border-b border-gray-800 flex justify-between items-center text-sm font-semibold">
       <div className="space-x-6 flex items-center">
@@ -16,6 +19,8 @@ export default function Header() {
           About
         </NavLink>
       </div>
+
+      <span className="text-gray-400">Welcome, {name}!</span>
     </header>
   );
 }
