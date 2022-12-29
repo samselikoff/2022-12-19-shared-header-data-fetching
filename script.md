@@ -1,8 +1,23 @@
 # Script
 
-# Todo
+## Copy
 
-- turn into syn
+🟢 Step 1
+
+```jsx
+export async function getServerSideProps() {
+  const user = await getUser();
+
+  return { props: { user } };
+}
+```
+
+🟢 Step 2
+
+```
+<span className="text-gray-400">Welcome, {name}!</span>
+```
+
 
 ## Next 12
 
