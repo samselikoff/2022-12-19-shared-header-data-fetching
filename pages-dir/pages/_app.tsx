@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Header user={pageProps.user} />
 
-      <main className="px-2 py-6">
+      <main className="px-4 py-6">
         <Component {...pageProps} />
       </main>
     </>
