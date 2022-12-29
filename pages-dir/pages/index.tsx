@@ -1,5 +1,3 @@
-import { getUser } from "../lib/get-user";
-
 export default function Home() {
   return (
     <div>
@@ -11,10 +9,4 @@ export default function Home() {
       </p>
     </div>
   );
-}
-
-export async function getServerSideProps() {
-  const user = await getUser();
-
-  return { props: { user } };
 }

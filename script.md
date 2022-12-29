@@ -41,3 +41,6 @@ Now let's see how Server Components solve this in Next 13.
 
 ## Next 13
 
+```jsx
+<span className="text-gray-400">Welcome, {user.name}!</span>
+```
